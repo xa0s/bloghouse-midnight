@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="<%= @item.i18n[:lang] %>">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="generator" content="Blockhouse - powered by nanoc <%= Nanoc::VERSION %>">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title><%= tr('site.title') %> - <%= @item[:title] %></title>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="/assets/css/main.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+		<!-- IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="row">
+
+				<!-- sidebar -->
+				<div class="column col-sm-4" id="sidebar">
+					<h1><a class="logo" href="/<%= @item.i18n[:lang] %>"><img src="/assets/img/logo.png"/></a></h1>
+					<div id="locales">
+						<% my_translations = translations_of(item) %>
+						<% $pref[:languages].each do |lang| %>
+							<% t = my_translations[lang] || @item %>
+							<%= link_to_unless_current tr(lang, :scope => 'lang.short', :locale => lang), t, :rel => 'alternate', :hreflang => lang %>
+						<% end %>
+					</div>
+				</div>
+
+				<!-- main -->
+				<div class="column col-sm-8" id="main">
+					<div class="padding">
+						<div class="full col-sm-9">
+
+							<%= yield %>
+
+							<hr>
+
+							<div class="row" id="footer">    
+								<div class="col-sm-6">
+								</div>
+								<div class="col-sm-6">
+									<p>
+										<a href="#" class="pull-right text-muted">© 2014 Andriy Skuratoff</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<!-- Bootstrap -->
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	</body>
+</html>

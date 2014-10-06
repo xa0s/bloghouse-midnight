@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Redirecting...</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<% if @item[:destination] and @item[:with_http] %>
+		<meta http-equiv="refresh" content="<%= @item[:pause] || 0 %>; url=<%= @item[:destination] %>">
+	<% end %>
+</head>
+<body>
+	<%= yield %>
+
+	<% if @item[:destination] and @item[:with_js] %>
+		<script>window.location.href = "<%= @item[:destination] %>"</script>
+	<% end %>
+</body>
+</html>

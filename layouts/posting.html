@@ -1,0 +1,28 @@
+<% render 'default' do %>
+	
+	<div class="page-header text-muted divider">
+		<%= @item[:title] %>
+	</div>
+
+	<div class="clearfix"> 
+		<h4 class="pull-left">
+			<small class="text-muted"><%= lc item.time(:created_at), :format => :blog %></small>
+		</h4>
+		<h4 class="pull-right">
+			<% if tags_for(item).any? %>
+				<p>
+					<% tags_for(item).each do |tag| %>
+						<span class="label label-tag">
+							<%= link_to tr(tag, :scope => :tag), @items["/blog/tag-latest-list/#{tag}/#{@item.i18n[:lang]}/"], :rel => 'tag' %>
+						</span>
+					<% end %> 
+				</p>
+			<% end %>
+		</h4>
+	</div>
+
+	<article>
+		<%= yield %>
+	</article>
+
+<% end %>

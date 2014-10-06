@@ -1,0 +1,29 @@
+uk:
+  site:
+    title: "Північ"
+  catalog:
+    title:
+      all:
+        latest: "Останні дописи"
+        paged: "Усі дописи за %{year}"
+      tagged:
+        latest: "Останні дописи з тегом %{tag}"
+        paged: "Дописи з тегом %{tag} за %{year}"
+    header:
+      other: "Інші дописи"
+      tags:
+        all: "Хмарка тегів"
+    pager:
+      latest: "%{count}&nbsp;останніх"
+    post:
+      read: "читати далі"
+  lang:
+    short:
+      en: 'ан'
+      uk: 'ук'
+    long:
+      en: 'англійськa'
+      uk: 'українськa'
+  time:
+    formats:
+      blog: ! '%d %B %Y'

@@ -1,0 +1,11 @@
+<% render 'default' do %>
+	<div class="page-header text-muted divider">
+		<%= @item[:title] %>
+	</div>
+
+	<ul>
+		<% @item[:entries].each do |entry| %>
+			<li><%= link_to tr(entry[:tag], :scope => :tag), entry.path %></li>
+		<% end %>
+	</ul>
+<% end %>

@@ -1,0 +1,29 @@
+en:
+  site:
+    title: "Midnight"
+  catalog:
+    title:
+      all:
+        latest: "Latest posts"
+        paged: "All posts in %{year}"
+      tagged:
+        latest: "Latest posts tagged %{tag}"
+        paged: "Posts tagged %{tag} in %{year}"
+    header:
+      other: "Other Posts"
+      tags:
+        all: "Tag Cloud"
+    pager:
+      latest: "%{count}&nbsp;latest"
+    post:
+      read: "Read More"
+  lang:
+    short:
+      en: 'en'
+      uk: 'uk'
+    long:
+      en: 'english'
+      uk: 'ukrainian'
+  time:
+    formats:
+      blog: ! '%B %d, %Y'
