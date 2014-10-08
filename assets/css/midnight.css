@@ -1,0 +1,153 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700');
+
+/* areas */
+
+html, body {
+	height: 100%;
+	font-family: 'Open Sans',arial,sans-serif;
+	font-size: 16px;
+}
+
+.wrapper, .row {
+	height: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.wrapper:before, .wrapper:after,
+.column:before, .column:after {
+	content: "";
+	display: table;
+}
+
+.wrapper:after,
+.column:after {
+	clear: both;
+}
+
+#sidebar, #main {
+	height: 100%;
+	overflow: auto;
+}
+
+#main {
+	background-color: #fefefe;
+}
+
+#sidebar {
+	color: #fefefe;
+	background-color: #010101;
+}
+
+/* other stuff */
+
+#locales {
+	position: absolute;
+	right: 0;
+	top: 50px;
+}
+
+#locales a, #locales span {
+	display: block;
+	margin: 3px 0 0 0;
+	border-width: 0;
+	border-right: 1px solid #010101;
+	border-radius: 5px 0 0 5px;
+	padding: 4px;
+	background-color: #fefefe;
+	color: #010101;
+	font-size: 9px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#locales .active {
+	border-right: 1px solid transparent;
+}
+
+#main .padding {
+    padding: 20px;
+}
+
+article p {
+	padding-top: 15px;
+}
+
+h4.pull-right .label {
+	margin-left: 5px;
+}
+
+.label a {
+	color: inherit;
+}
+
+a.nocolor {
+	color: inherit;
+}
+
+.divider {
+	margin-top: 32px;
+}
+
+#footer {
+  margin-bottom:20px;
+}
+
+.label-tag {
+  background-color: #010101;
+}
+
+/* mobile */
+
+@media (max-width: 767px) {
+
+	#sidebar, #main {
+		overflow: visible;
+	}
+
+	#sidebar {
+		height: 75%;
+	}
+
+	#locales {
+		position: absolute;
+		top: auto;
+		bottom: 0;
+		right: 20px;
+	}
+
+	#locales a, #locales span {
+		display: inline-block;
+		border-bottom: 1px solid #010101;
+		border-radius: 5px 5px 0 0;
+	}
+
+	#locales .active {
+		border-bottom: 1px solid transparent;
+	}	
+}
+
+/* bootstrap overrides */
+
+h1,h2,h3 {
+	font-weight: 800;
+	font-family: 'Open Sans',arial,sans-serif;
+}
+
+.page-header {
+	margin-top: 30px;
+	padding-top: 9px;
+	border-top: 1px solid #eeeeee;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.col-sm-9.full {
+	width: 100%;
+}
+
+small.text-muted {
+	font-family: courier,courier-new,monospace;
+}
