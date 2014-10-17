@@ -21,9 +21,11 @@ uk:
     short:
       en: 'ан'
       uk: 'ук'
+      ru: 'ро'
     long:
       en: 'англійськa'
       uk: 'українськa'
+      ru: 'російська'
   time:
     formats:
       blog: ! '%d %B %Y'

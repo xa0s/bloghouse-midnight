@@ -1,0 +1,31 @@
+ru:
+  site:
+    title: "Полночь"
+  catalog:
+    title:
+      all:
+        latest: "Последние записи"
+        paged: "Все записи за %{year}"
+      tagged:
+        latest: "Последние записи с тегом %{tag}"
+        paged: "Записи с тегом %{tag} за %{year}"
+    header:
+      other: "Другие записи"
+      tags:
+        all: "Облако тегов"
+    pager:
+      latest: "%{count}&nbsp;последних"
+    post:
+      read: "читать дальше"
+  lang:
+    short:
+      en: 'ан'
+      uk: 'ук'
+      ru: 'ру'
+    long:
+      en: 'английський'
+      uk: 'украинський'
+      ru: 'русский'
+  time:
+    formats:
+      blog: ! '%d %B %Y'
