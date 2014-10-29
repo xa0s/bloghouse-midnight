@@ -98,6 +98,10 @@ a.nocolor {
   background-color: #010101;
 }
 
+#main img {
+	max-width: 100%;
+}
+
 /* mobile */
 
 @media (max-width: 767px) {
