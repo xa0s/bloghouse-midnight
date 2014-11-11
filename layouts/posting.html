@@ -28,7 +28,7 @@
 	<% if $pref[:followme] %>
 		<div class="followme divider">
 			<p><%= tr('followme.welcome') %></p>
-			<form role="form">
+			<form role="form" class="madmimi digest" data-madmimi-id="<%= $pref[:madmimi] %>" data-lang="<%= @item.i18n[:lang] %>">
 				<div class="links">
 					<% if $pref[:rss] %>
 						<a href="<%= $pref[:rss][@item.i18n[:lang]] %>"><i class="fa fa-rss-square fa-2x"></i></a>
@@ -48,7 +48,7 @@
 						<button type="submit" class="btn btn-default btn-sm">OK</button>
 					</div>
 					<div class="input">
-						<input type="email" class="form-control input-sm" id="digestEmail" placeholder="your@email.com">
+						<input type="email" class="form-control input-sm email" id="digestEmail" placeholder="your@email.com">
 					</div>
 				<% else %>
 					<div>&nbsp;</div>
