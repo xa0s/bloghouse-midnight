@@ -25,6 +25,38 @@
 		<%= yield %>
 	</article>
 
+	<% if $pref[:followme] %>
+		<div class="followme divider">
+			<p><%= tr('followme.welcome') %></p>
+			<form role="form">
+				<div class="links">
+					<% if $pref[:rss] %>
+						<a href="<%= $pref[:rss][@item.i18n[:lang]] %>"><i class="fa fa-rss-square fa-2x"></i></a>
+					<% end %>
+					<% if $pref[:twitter] %>
+						<a href="<%= $pref[:twitter][@item.i18n[:lang]] %>"><i class="fa fa-twitter-square fa-2x"></i></a>
+					<% end %>
+					<% if $pref[:facebook] %>
+						<a href="<%= $pref[:facebook][@item.i18n[:lang]] %>"><i class="fa fa-facebook-square fa-2x"></i></a>
+					<% end %>
+					<% if $pref[:linkedin] %>
+						<a href="<%= $pref[:linkedin][@item.i18n[:lang]] %>"><i class="fa fa-linkedin-square fa-2x"></i></a>
+					<% end %>
+				</div>
+				<% if $pref[:madmimi] %>
+					<div class="button">
+						<button type="submit" class="btn btn-default btn-sm">OK</button>
+					</div>
+					<div class="input">
+						<input type="email" class="form-control input-sm" id="digestEmail" placeholder="your@email.com">
+					</div>
+				<% else %>
+					<div>&nbsp;</div>
+				<% end %>
+			</form>
+		</div>
+	<% end %>
+
 	<% if $pref[:disqus] and @item[:disqus] %>
 		<div class="row divider"></div>
 

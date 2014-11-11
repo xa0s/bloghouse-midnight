@@ -102,6 +102,42 @@ a.nocolor {
 	max-width: 100%;
 }
 
+.followme {
+	background-color: #010101;
+	padding: 15px 20px;
+	color: #fefefe;
+	border-radius: 3px;
+}
+
+.followme a {
+	display: inline-block;
+	color: inherit;
+}
+
+.followme p {
+	font-style: italic;
+	font-size: smaller;
+}
+
+.followme form {
+	display: block;
+	width: 100%;
+}
+
+.followme .links {
+	float: left;
+	margin-right: 15px;
+}
+
+.followme .input {
+	overflow: hidden;
+}
+
+.followme .button {
+	float: right;
+	margin-left: 5px;
+}
+
 /* mobile */
 
 @media (max-width: 767px) {
