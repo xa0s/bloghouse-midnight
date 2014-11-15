@@ -138,6 +138,36 @@ a.nocolor {
 	margin-left: 5px;
 }
 
+.awe-btn {
+	display: inline-block;
+	color: inherit;
+}
+
+.awe-btn-dark {
+	color: #010101;
+}
+
+.awe-btn-dark:hover {
+	color: #919191;
+}
+
+.awe-btn-light {
+	color: #fefefe;
+}
+
+.awe-btn-dark:hover {
+	color: #aeaeae;
+}
+
+.share {
+	margin: 20px 0 30px;
+	padding: 0;
+	border-bottom: 1px solid #eeeeee;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;	
+}
+
 /* mobile */
 
 @media (max-width: 767px) {
