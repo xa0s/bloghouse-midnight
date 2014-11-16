@@ -27,16 +27,24 @@
 
 	<div class="share text-muted">
 		<div class="share-buttons pull-right">
-			<a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fpragmaticleaders.com&text=:%20http%3A%2F%2Fpragmaticleaders.com" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20' + encodeURIComponent(document.URL)); return false;" class="awe-btn awe-btn-dark">
+
+			<a target="_blank" title="Tweet" class="awe-btn awe-btn-dark"
+				href="https://twitter.com/intent/tweet?url=<%=u @item.url %>&text=<%=u @item[:title] %>">
 				<i class="fa fa-twitter-square fa-2x"></i>
 			</a>
-			<a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpragmaticleaders.com&t=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;" class="awe-btn awe-btn-dark">
+
+			<a target="_blank" title="Share on Facebook" class="awe-btn awe-btn-dark"
+				href="https://www.facebook.com/sharer/sharer.php?u=<%=u @item.url %>&t=<%=u @item[:title] %>">
 				<i class="fa fa-facebook-square fa-2x"></i>
 			</a>
-			<a href="https://plus.google.com/share?url=http%3A%2F%2Fpragmaticleaders.com" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;" class="awe-btn awe-btn-dark">
+
+			<a target="_blank" title="Share on Google+" class="awe-btn awe-btn-dark"
+				href="https://plus.google.com/share?url=<%=u @item.url %>" >
 				<i class="fa fa-google-plus-square fa-2x"></i>
 			</a>
-			<a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fpragmaticleaders.com&title=&summary=&source=http%3A%2F%2Fpragmaticleaders.com" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;" class="awe-btn awe-btn-dark">
+
+			<a target="_blank" title="Share on LinkedIn" class="awe-btn awe-btn-dark"
+				href="http://www.linkedin.com/shareArticle?mini=true&url=<%=u @item.url %>&title=<%=u @item[:title] %>&summary=<%=u @item[:excerpt] %>&source=<%=u @item.url %>">
 				<i class="fa fa-linkedin-square fa-2x"></i>
 			</a>
 		</div>
