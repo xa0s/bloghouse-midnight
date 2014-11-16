@@ -109,11 +109,6 @@ a.nocolor {
 	border-radius: 3px;
 }
 
-.followme a {
-	display: inline-block;
-	color: inherit;
-}
-
 .followme p {
 	font-style: italic;
 	font-size: smaller;
@@ -147,16 +142,12 @@ a.nocolor {
 	color: #010101;
 }
 
-.awe-btn-dark:hover {
-	color: #919191;
-}
-
 .awe-btn-light {
 	color: #fefefe;
 }
 
-.awe-btn-dark:hover {
-	color: #aeaeae;
+.awe-btn-dark:hover, .awe-btn-light:hover {
+	color: #7f7f7f;
 }
 
 .share {

@@ -57,16 +57,24 @@
 			<form role="form" class="madmimi digest" data-madmimi-id="<%= $pref[:madmimi] %>" data-lang="<%= @item.i18n[:lang] %>">
 				<div class="links">
 					<% if $pref[:rss] %>
-						<a href="<%= $pref[:rss][@item.i18n[:lang]] %>"><i class="fa fa-rss-square fa-2x"></i></a>
+						<a class="awe-btn awe-btn-light" href="<%= $pref[:rss][@item.i18n[:lang]] %>">
+							<i class="fa fa-rss-square fa-2x"></i>
+						</a>
 					<% end %>
 					<% if $pref[:twitter] %>
-						<a href="<%= $pref[:twitter][@item.i18n[:lang]] %>"><i class="fa fa-twitter-square fa-2x"></i></a>
+						<a class="awe-btn awe-btn-light" href="<%= $pref[:twitter][@item.i18n[:lang]] %>">
+							<i class="fa fa-twitter-square fa-2x"></i>
+						</a>
 					<% end %>
 					<% if $pref[:facebook] %>
-						<a href="<%= $pref[:facebook][@item.i18n[:lang]] %>"><i class="fa fa-facebook-square fa-2x"></i></a>
+						<a class="awe-btn awe-btn-light" href="<%= $pref[:facebook][@item.i18n[:lang]] %>">
+							<i class="fa fa-facebook-square fa-2x"></i>
+						</a>
 					<% end %>
 					<% if $pref[:linkedin] %>
-						<a href="<%= $pref[:linkedin][@item.i18n[:lang]] %>"><i class="fa fa-linkedin-square fa-2x"></i></a>
+						<a class="awe-btn awe-btn-light" href="<%= $pref[:linkedin][@item.i18n[:lang]] %>">
+							<i class="fa fa-linkedin-square fa-2x"></i>
+						</a>
 					<% end %>
 				</div>
 				<% if $pref[:madmimi] %>
