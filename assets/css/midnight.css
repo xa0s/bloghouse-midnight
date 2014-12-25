@@ -214,3 +214,8 @@ h1,h2,h3 {
 small.text-muted {
 	font-family: courier,courier-new,monospace;
 }
+
+blockquote {
+	font-size: inherit;
+	font-style: italic;
+}
