@@ -74,6 +74,18 @@ article p {
 	padding-top: 15px;
 }
 
+ul.dialog {
+	list-style-type: none;
+}
+
+ul.dialog li:before {
+	content: "— ";
+}
+
+ul.dialog li {
+	margin-top: 5px;
+}
+
 h4.pull-right .label {
 	margin-left: 5px;
 }
