@@ -79,7 +79,7 @@ ul.dialog {
 }
 
 ul.dialog li:before {
-	content: "— ";
+	content: "\2014\00A0";
 }
 
 ul.dialog li {
