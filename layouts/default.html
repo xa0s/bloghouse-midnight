@@ -43,10 +43,12 @@
 				<div class="column col-sm-4" id="sidebar">
 					<h1><a class="logo" href="/<%= @item.i18n[:lang] %>"><img src="/assets/img/logo.png"/></a></h1>
 					<div id="locales">
-						<% my_translations = translations_of(item) %>
+						<% vs = versions_of(item) %>
 						<% $pref[:languages].each do |lang| %>
-							<% t = my_translations[lang] || @item %>
-							<%= link_to_unless_current tr(lang, :scope => 'lang.short', :locale => lang), t, :rel => 'alternate', :hreflang => lang %>
+							<% t = vs[lang] %>
+							<% if t %>
+								<%= link_to_unless_current tr(lang, :scope => 'lang.short', :locale => lang), t, :rel => 'alternate', :hreflang => lang %>
+							<% end %>
 						<% end %>
 					</div>
 				</div>
