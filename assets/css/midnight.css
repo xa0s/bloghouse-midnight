@@ -206,8 +206,13 @@ a.nocolor {
 /* bootstrap overrides */
 
 h1,h2,h3 {
-	font-weight: 800;
+	font-weight: 700;
 	font-family: 'Open Sans',arial,sans-serif;
+	font-variant: small-caps;
+}
+
+h2 {
+	font-size: 20px;
 }
 
 .page-header {
