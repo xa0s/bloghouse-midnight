@@ -41,6 +41,11 @@ html, body {
 
 /* other stuff */
 
+a.logo img {
+	width: 60%;
+	max-width: 200px;
+}
+
 #locales {
 	position: absolute;
 	right: 0;
