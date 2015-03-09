@@ -25,6 +25,10 @@
 		<%= yield %>
 	</article>
 
+	<div class="author">
+		<a href="<%= tr "author.#{@item[:author]}.url" %>">©&nbsp;<%= tr "author.#{@item[:author]}.name" %></span>
+	</div>
+
 	<div class="share text-muted">
 		<div class="share-buttons pull-right">
 

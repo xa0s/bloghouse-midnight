@@ -186,6 +186,12 @@ a.nocolor {
 	margin-left: 50px;
 }
 
+.author {
+	text-align: end;
+	font-style: oblique;
+	font-size: smaller;
+}
+
 /* mobile */
 
 @media (max-width: 767px) {
