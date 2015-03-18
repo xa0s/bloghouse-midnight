@@ -71,6 +71,16 @@ a.logo img {
 	border-right: 1px solid transparent;
 }
 
+#followme {
+	position: absolute;
+	right: 5px;
+	bottom: 150px;
+}
+
+#followme a {
+	display: block;
+}
+
 #main .padding {
     padding: 20px;
 }

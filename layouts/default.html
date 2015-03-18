@@ -42,6 +42,7 @@
 				<!-- sidebar -->
 				<div class="column col-sm-4" id="sidebar">
 					<h1><a class="logo" href="/<%= @item.i18n[:lang] %>"><img src="/assets/img/logo/big/white.svg"/></a></h1>
+					
 					<div id="locales">
 						<% vs = versions_of(item) %>
 						<% $pref[:languages].each do |lang| %>
@@ -49,6 +50,29 @@
 							<% if t %>
 								<%= link_to_unless_current tr(lang, :scope => 'lang.short', :locale => lang), t, :rel => 'alternate', :hreflang => lang %>
 							<% end %>
+						<% end %>
+					</div>
+
+					<div id="followme">
+						<% if $pref[:rss] %>
+							<a class="awe-btn awe-btn-light" href="<%= $pref[:rss][@item.i18n[:lang]] %>">
+								<i class="fa fa-rss-square fa-2x"></i>
+							</a>
+						<% end %>
+						<% if $pref[:twitter] %>
+							<a class="awe-btn awe-btn-light" href="<%= $pref[:twitter][@item.i18n[:lang]] %>">
+								<i class="fa fa-twitter-square fa-2x"></i>
+							</a>
+						<% end %>
+						<% if $pref[:facebook] %>
+							<a class="awe-btn awe-btn-light" href="<%= $pref[:facebook][@item.i18n[:lang]] %>">
+								<i class="fa fa-facebook-square fa-2x"></i>
+							</a>
+						<% end %>
+						<% if $pref[:linkedin] %>
+							<a class="awe-btn awe-btn-light" href="<%= $pref[:linkedin][@item.i18n[:lang]] %>">
+								<i class="fa fa-linkedin-square fa-2x"></i>
+							</a>
 						<% end %>
 					</div>
 				</div>
