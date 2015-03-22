@@ -54,6 +54,11 @@
 					</div>
 
 					<div id="followme">
+						<% if $pref[:madmimi] %>
+							<a class="awe-btn awe-btn-light subscribe-up" href="#">
+								<i class="fa fa-envelope-square fa-2x"></i>
+							</a>
+						<% end %>
 						<% if $pref[:rss] %>
 							<a class="awe-btn awe-btn-light" href="<%= $pref[:rss][@item.i18n[:lang]] %>">
 								<i class="fa fa-rss-square fa-2x"></i>
@@ -87,6 +92,24 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<div id="subscribe">
+			<div class="subscribe-down">
+				<i class="fa fa-angle-double-down fa-2x"></i>
+			</div>
+			<div class="content center-block">
+				<h1><%= tr 'subscribe.header' %></h1>
+				<em><%= tr 'subscribe.message' %></em>
+				<form role="form" class="madmimi digest" data-madmimi-id="<%= $pref[:madmimi] %>" data-lang="<%= @item.i18n[:lang] %>">
+					<input type="email" class="form-control email" placeholder="your@email.com">
+					<div class="buttons clearfix">
+						<button class="btn btn-link btn-sm subscribe-down pull-left"><%= tr 'subscribe.button.notnow' %></button>
+						<button class="btn btn-link btn-sm subscribe-down pull-left"><%= tr 'subscribe.button.already' %></button>
+						<button class="btn btn-primary btn-lg pull-right" type="submit"><%= tr 'subscribe.button.subscribe' %></button>
+					</div>
+				</form>
 			</div>
 		</div>
 

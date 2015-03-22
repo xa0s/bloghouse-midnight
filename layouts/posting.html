@@ -56,42 +56,35 @@
 	</div>
 
 	<% if $pref[:followme] %>
-		<div class="followme divider">
+		<div id="followme-big" class="divider">
 			<p><%= tr('followme.welcome') %></p>
-			<form role="form" class="madmimi digest" data-madmimi-id="<%= $pref[:madmimi] %>" data-lang="<%= @item.i18n[:lang] %>">
-				<div class="links">
-					<% if $pref[:rss] %>
-						<a class="awe-btn awe-btn-light" href="<%= $pref[:rss][@item.i18n[:lang]] %>">
-							<i class="fa fa-rss-square fa-2x"></i>
-						</a>
-					<% end %>
-					<% if $pref[:twitter] %>
-						<a class="awe-btn awe-btn-light" href="<%= $pref[:twitter][@item.i18n[:lang]] %>">
-							<i class="fa fa-twitter-square fa-2x"></i>
-						</a>
-					<% end %>
-					<% if $pref[:facebook] %>
-						<a class="awe-btn awe-btn-light" href="<%= $pref[:facebook][@item.i18n[:lang]] %>">
-							<i class="fa fa-facebook-square fa-2x"></i>
-						</a>
-					<% end %>
-					<% if $pref[:linkedin] %>
-						<a class="awe-btn awe-btn-light" href="<%= $pref[:linkedin][@item.i18n[:lang]] %>">
-							<i class="fa fa-linkedin-square fa-2x"></i>
-						</a>
-					<% end %>
-				</div>
-				<% if $pref[:madmimi] %>
-					<div class="button">
-						<button type="submit" class="btn btn-default btn-sm">OK</button>
-					</div>
-					<div class="input">
-						<input type="email" class="form-control input-sm email" id="digestEmail" placeholder="your@email.com">
-					</div>
-				<% else %>
-					<div>&nbsp;</div>
+			<div class="links clearfix">
+				<% if $pref[:twitter] %>
+					<a class="awe-btn awe-btn-light pull-right" href="<%= $pref[:twitter][@item.i18n[:lang]] %>">
+						<i class="fa fa-twitter-square fa-2x"></i>
+					</a>
 				<% end %>
-			</form>
+				<% if $pref[:facebook] %>
+					<a class="awe-btn awe-btn-light pull-right" href="<%= $pref[:facebook][@item.i18n[:lang]] %>">
+						<i class="fa fa-facebook-square fa-2x"></i>
+					</a>
+				<% end %>
+				<% if $pref[:linkedin] %>
+					<a class="awe-btn awe-btn-light pull-right" href="<%= $pref[:linkedin][@item.i18n[:lang]] %>">
+						<i class="fa fa-linkedin-square fa-2x"></i>
+					</a>
+				<% end %>
+				<% if $pref[:rss] %>
+					<a class="awe-btn awe-btn-light pull-right" href="<%= $pref[:rss][@item.i18n[:lang]] %>">
+						<i class="fa fa-rss-square fa-2x"></i>
+					</a>
+				<% end %>
+				<% if $pref[:madmimi] %>
+					<a class="awe-btn awe-btn-light subscribe-up pull-right" href="#">
+						<i class="fa fa-envelope-square fa-2x"></i>
+					</a>
+				<% end %>
+			</div>
 		</div>
 	<% end %>
 
