@@ -66,12 +66,17 @@ html, body {
 
 .midnight-popup .content {
 	clear: both;
-	width: 360px;
+	width: 380px;
 	padding-top: 10px;
 }
 
 #subscribe input {
 	margin: 5px 0 10px 0;
+}
+
+#subscribe button.btn-link {
+	padding-left: 0;
+	padding-right: 5px;
 }
 
 
@@ -251,6 +256,10 @@ a.nocolor {
 	#locales .active {
 		border-bottom: 1px solid transparent;
 	}	
+
+	.midnight-popup .content {
+		width: 280px;
+	}
 }
 
 /* bootstrap overrides */

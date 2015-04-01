@@ -103,7 +103,7 @@
 				<h1><%= tr 'subscribe.header' %></h1>
 				<em><%= tr 'subscribe.message' %></em>
 				<form role="form" class="madmimi digest" data-madmimi-id="<%= $pref[:madmimi] %>" data-lang="<%= @item.i18n[:lang] %>">
-					<input type="email" class="form-control email" placeholder="your@email.com">
+					<input type="email" class="form-control email" placeholder="<%= tr 'subscribe.email.hint' %>">
 					<div class="buttons clearfix">
 						<button type="button" class="btn btn-link btn-sm subscribe-hide pull-left"><%= tr 'subscribe.button.notnow' %></button>
 						<button type="button" class="btn btn-link btn-sm subscribe-hide pull-left"><%= tr 'subscribe.button.already' %></button>
