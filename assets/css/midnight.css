@@ -297,6 +297,7 @@ h3 {
 
 .col-sm-9.full {
 	width: 100%;
+	max-width: 900px;
 }
 
 small.text-muted {
