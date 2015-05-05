@@ -64,11 +64,6 @@
 								<i class="fa fa-rss-square fa-2x"></i>
 							</a>
 						<% end %>
-						<% if $pref[:twitter] %>
-							<a class="awe-btn awe-btn-light" href="<%= $pref[:twitter][@item.i18n[:lang]] %>">
-								<i class="fa fa-twitter-square fa-2x"></i>
-							</a>
-						<% end %>
 						<% if $pref[:facebook] %>
 							<a class="awe-btn awe-btn-light" href="<%= $pref[:facebook][@item.i18n[:lang]] %>">
 								<i class="fa fa-facebook-square fa-2x"></i>
@@ -77,6 +72,11 @@
 						<% if $pref[:linkedin] %>
 							<a class="awe-btn awe-btn-light" href="<%= $pref[:linkedin][@item.i18n[:lang]] %>">
 								<i class="fa fa-linkedin-square fa-2x"></i>
+							</a>
+						<% end %>
+						<% if $pref[:twitter] %>
+							<a class="awe-btn awe-btn-light" href="<%= $pref[:twitter][@item.i18n[:lang]] %>">
+								<i class="fa fa-twitter-square fa-2x"></i>
 							</a>
 						<% end %>
 					</div>
