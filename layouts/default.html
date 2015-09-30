@@ -105,8 +105,8 @@
 				<form role="form" class="madmimi digest" data-madmimi-id="<%= $pref[:madmimi] %>" data-lang="<%= @item.i18n[:lang] %>">
 					<input type="email" class="form-control email" placeholder="<%= tr 'subscribe.email.hint' %>">
 					<div class="buttons clearfix">
-						<button type="button" class="btn btn-link btn-sm subscribe-hide pull-left"><%= tr 'subscribe.button.notnow' %></button>
-						<button type="button" class="btn btn-link btn-sm subscribe-hide pull-left"><%= tr 'subscribe.button.already' %></button>
+						<button type="button" class="btn btn-link btn-sm subscribe-hide subscribe-notnow pull-left"><%= tr 'subscribe.button.notnow' %></button>
+						<button type="button" class="btn btn-link btn-sm subscribe-hide subscribe-already pull-left"><%= tr 'subscribe.button.already' %></button>
 						<button type="submit" class="btn btn-primary btn-lg pull-right"><%= tr 'subscribe.button.subscribe' %></button>
 					</div>
 				</form>
@@ -125,6 +125,8 @@
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="//cdn.jsdelivr.net/jquery.waypoints/2.0.5/waypoints.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.3/js.cookie.min.js"></script>
 		<!-- Bootstrap -->
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script src="/assets/js/midnight.js"></script>

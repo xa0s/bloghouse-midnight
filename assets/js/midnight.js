@@ -7,7 +7,8 @@ var midnight = (function() {
 		$('.subscribe-show').click(SubscribePanel.show);
 		$('.subscribe-hide').click(SubscribePanel.hide);
 		$('.thankyou-hide').click(ThankYouPanel.hide);
-
+		$('.subscribe-notnow').click(AutoPopup.doNotDisturbShort);
+		$('.subscribe-already').click(AutoPopup.doNotDisturbLong);		
 	}
 
 	var MadMimi = {
@@ -81,7 +82,28 @@ var midnight = (function() {
 		$('#thankyou')
 	);
 
+	var AutoPopup = {
+		doNotDisturbShort: function() {
+			Cookies.set('DND', 'DND', { expires: 1 });
+		},
+		doNotDisturbLong: function() {
+			Cookies.set('DND', 'DND', { expires: 365/3 });
+		},
+		waypoints: $('#followme-big').waypoint({
+			handler: function(direction) {
+				if(direction == 'down') {
+					if(Cookies.get('DND') != 'DND') {
+						setTimeout(SubscribePanel.show, 500);
+					}
+				}
+			},
+			offset: '80%',
+			context: '#main'
+		})
+	}
+
 	return {
+		autopopup: AutoPopup,
 		subscribe: SubscribePanel,
 		thankyou: ThankYouPanel,
 		madmimi: MadMimi
