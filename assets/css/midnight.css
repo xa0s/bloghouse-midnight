@@ -79,6 +79,20 @@ html, body {
 	padding-right: 5px;
 }
 
+#subscribe .buttons .btn-lg{
+	width: 100%
+}
+
+#subscribe .buttons div {
+	width: 100%;
+	margin-top: 3px;
+}
+
+#subscribe .buttons div button {
+	white-space: normal;
+	max-width: 40%;
+}
+
 
 /* other stuff */
 
