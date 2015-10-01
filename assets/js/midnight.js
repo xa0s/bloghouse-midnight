@@ -12,11 +12,11 @@ var midnight = (function() {
 
 		$('#followme-big').waypoint({
 			handler: AutoPopup.showPerhaps,
-			offset: '80%',
+			offset: '95%',
 		});
 		$('#followme-big').waypoint({
 			handler: AutoPopup.showPerhaps,
-			offset: '80%',
+			offset: '95%',
 			context: '#main'
 		});
 	}
