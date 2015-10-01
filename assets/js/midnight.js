@@ -47,7 +47,7 @@ var midnight = (function() {
 				panel.show();
 				panel.animate(
 					{ 
-						'height': '70%' 
+						'height': '80%' 
 					}, 
 					{ 
 						'duration': 500,
