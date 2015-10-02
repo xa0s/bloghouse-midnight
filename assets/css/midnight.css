@@ -71,7 +71,7 @@ html, body {
 }
 
 #subscribe input {
-	margin: 5px 0 10px 0;
+	margin: 2ex 0 2ex 0;
 }
 
 #subscribe button.btn-link {
@@ -79,16 +79,16 @@ html, body {
 	padding-right: 5px;
 }
 
-#subscribe .buttons .btn-lg{
+#subscribe button.yes {
 	width: 100%
 }
 
-#subscribe .buttons div {
+#subscribe div.no {
 	width: 100%;
-	margin-top: 3px;
+	margin-top: 1ex;
 }
 
-#subscribe .buttons div button {
+#subscribe div.no button {
 	white-space: normal;
 	max-width: 40%;
 }

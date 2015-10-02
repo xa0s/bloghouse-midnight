@@ -104,19 +104,21 @@
 				<em><%= tr 'subscribe.message' %></em>
 				<form role="form" class="madmimi digest" data-madmimi-id="<%= $pref[:madmimi] %>" data-lang="<%= @item.i18n[:lang] %>">
 					<input type="email" class="form-control email" placeholder="<%= tr 'subscribe.email.hint' %>">
-					<div class="buttons clearfix">
-						<button type="submit" class="btn btn-primary btn-lg"><%= tr 'subscribe.button.subscribe' %> <i class="fa fa-thumbs-up"></i></button>
-						<div class="clearfix">
-							<button type="button" class="btn btn-link btn-xs subscribe-hide subscribe-notnow pull-right">
-								<i class="fa fa-times"></i>
-								<%= tr 'subscribe.button.notnow' %>
-							</button>
-							<button type="button" class="btn btn-link btn-xs subscribe-hide subscribe-already pull-left">
-								<i class="fa fa-check"></i>
-								<%= tr 'subscribe.button.already' %>
-							</button>
-						</div>
-					</div>
+					
+					<button type="submit" class="btn btn-primary btn-lg yes">
+						<i class="fa fa-unlock-alt"></i> <%= tr 'subscribe.button.subscribe' %>
+					</button>
+
+					<div class="no clearfix">
+						<button type="button" class="btn btn-link btn-xs subscribe-hide subscribe-notnow pull-right" tabindex="-1">
+							<i class="fa fa-times"></i>
+							<%= tr 'subscribe.button.notnow' %>
+						</button>
+						<button type="button" class="btn btn-link btn-xs subscribe-hide subscribe-already pull-left" tabindex="-1">
+							<i class="fa fa-check"></i>
+							<%= tr 'subscribe.button.already' %>
+						</button>
+					</div>					
 				</form>
 			</div>
 		</div>
