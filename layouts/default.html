@@ -102,7 +102,9 @@
 			<div class="content center-block">
 				<h1><%= tr 'subscribe.header' %></h1>
 				<em><%= tr 'subscribe.message' %></em>
-				<form role="form" class="madmimi digest" data-madmimi-id="<%= $pref[:madmimi] %>" data-lang="<%= @item.i18n[:lang] %>">
+				<form role="form" class="madmimi digest" 
+					data-madmimi-id="<%= $pref[:madmimi] %>" data-lang="<%= @item.i18n[:lang] %>" data-type="news" data-source="Self Signed">
+
 					<input type="email" class="form-control email" placeholder="<%= tr 'subscribe.email.hint' %>">
 					
 					<button type="submit" class="btn btn-primary btn-lg yes">
