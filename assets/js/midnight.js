@@ -108,7 +108,7 @@ var midnight = (function() {
 			}
 		},
 		doNotDisturbLong: function() {
-			Cookies.set('DND', 'DND', { expires: 365/6 });
+			Cookies.set('DND', 'DND', { expires: 365/2 });
 		},
 		showPerhaps: function(direction) {
 			if(direction == 'down') {
