@@ -4,11 +4,12 @@ var midnight = (function() {
 
 	function wire() {
 		$('form.madmimi.digest').submit(MadMimi.subscribeDigest);
+		
 		$('.subscribe-show').click(SubscribePanel.show);
 		$('.subscribe-hide').click(SubscribePanel.hide);
+		$('.subscribe-hide').click(AutoPopup.doNotDisturbShort);
+		
 		$('.thankyou-hide').click(ThankYouPanel.hide);
-		$('.subscribe-notnow').click(AutoPopup.doNotDisturbShort);
-		$('.subscribe-already').click(AutoPopup.doNotDisturbLong);	
 
 		$('#followme-big').waypoint({
 			handler: AutoPopup.showPerhaps,
@@ -19,6 +20,10 @@ var midnight = (function() {
 			offset: '95%',
 			context: '#main'
 		});
+
+		if(window.location.search.search("utm_source=MadMimi") > 0 && window.location.search.search("utm_medium=email") > 0) {
+			AutoPopup.doNotDisturbLong();
+		}
 	}
 
 	var MadMimi = {
@@ -98,10 +103,12 @@ var midnight = (function() {
 
 	var AutoPopup = {
 		doNotDisturbShort: function() {
-			Cookies.set('DND', 'DND', { expires: 1 });
+			if(Cookies.get('DND') != 'DND') {
+				Cookies.set('DND', 'DND', { expires: 1/24/4 });
+			}
 		},
 		doNotDisturbLong: function() {
-			Cookies.set('DND', 'DND', { expires: 365/3 });
+			Cookies.set('DND', 'DND', { expires: 365/6 });
 		},
 		showPerhaps: function(direction) {
 			if(direction == 'down') {
