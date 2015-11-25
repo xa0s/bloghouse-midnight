@@ -74,25 +74,9 @@ html, body {
 	margin: 2ex 0 2ex 0;
 }
 
-#subscribe button.btn-link {
-	padding-left: 0;
-	padding-right: 5px;
-}
-
 #subscribe button.yes {
 	width: 100%
 }
-
-#subscribe div.no {
-	width: 100%;
-	margin-top: 1ex;
-}
-
-#subscribe div.no button {
-	white-space: normal;
-	max-width: 40%;
-}
-
 
 /* other stuff */
 
