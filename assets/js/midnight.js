@@ -38,7 +38,7 @@ var midnight = (function() {
 			var type = form.data('type');
 			var source = form.data('source');
 			var email = form.find('input.email').first().val();
-			var name = form.find('input.name').first().val();
+			var name = form.find('input.name').first().val() || '';
 
 			var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
 			script.src = 'https://madmimi.com/signups/subscribe/' + id + '.json?callback=midnight.madmimi.callback.digest' 
