@@ -100,7 +100,10 @@
 				<i class="fa fa-angle-double-down fa-2x"></i>
 			</div>
 			<div class="content center-block">
-				<h1><%= tr 'subscribe.header' %></h1>
+				<h1> 
+					<i class="fa fa-unlock-alt"></i>
+					<%= tr 'subscribe.header' %>
+				</h1>
 				<em><%= tr 'subscribe.message' %></em>
 				<form role="form" class="madmimi digest" 
 					data-madmimi-id="<%= $pref[:madmimi] %>" data-lang="<%= @item.i18n[:lang] %>" data-type="news" data-source="Self Signed">
@@ -111,7 +114,7 @@
 					</div>
 
 					<button type="submit" class="btn btn-primary btn-lg yes">
-						<i class="fa fa-unlock-alt"></i> <%= tr 'subscribe.button.subscribe' %>
+						<%= tr 'subscribe.button.subscribe' %>
 					</button>
 				</form>
 			</div>
