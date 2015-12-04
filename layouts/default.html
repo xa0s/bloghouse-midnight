@@ -7,12 +7,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><%= @item[:title] %> – <%= tr('site.title') %></title>
 
-		<!-- Bootstrap -->
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.1/css/formValidation.min.css">
 
 		<link rel="stylesheet" href="/assets/css/midnight.css">
 
-		<link href="//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css">
 
 		<!-- IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -105,8 +105,11 @@
 				<form role="form" class="madmimi digest" 
 					data-madmimi-id="<%= $pref[:madmimi] %>" data-lang="<%= @item.i18n[:lang] %>" data-type="news" data-source="Self Signed">
 
-					<input type="email" class="form-control email" placeholder="<%= tr 'subscribe.email.hint' %>">
-					
+					<div class="form-group">
+						<input type="email" name="email" class="form-control email" placeholder="<%= tr 'subscribe.email.hint' %>" 
+							data-fv-message="<%= tr 'subscribe.email.invalid' %>" data-fv-notempty="true" data-fv-emailaddress="true">
+					</div>
+
 					<button type="submit" class="btn btn-primary btn-lg yes">
 						<i class="fa fa-unlock-alt"></i> <%= tr 'subscribe.button.subscribe' %>
 					</button>
@@ -124,14 +127,14 @@
 			</div>
 		</div>
 
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="//cdn.jsdelivr.net/jquery.waypoints/2.0.5/waypoints.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.3/js.cookie.min.js"></script>
-		<!-- Bootstrap -->
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.1/js/formValidation.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.1/js/framework/bootstrap.min.js"></script>
 		<script src="/assets/js/midnight.js"></script>
+
 		<% if $pref[:quantcast] %>
 			<!-- Quantcast Tag -->
 			<script type="text/javascript">

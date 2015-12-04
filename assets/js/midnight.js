@@ -3,7 +3,11 @@ var midnight = (function() {
 	$(document).ready(wire);
 
 	function wire() {
-		$('form.madmimi.digest').submit(MadMimi.subscribeDigest);
+
+		$('form.madmimi.digest').formValidation({
+			live: 'disabled',
+			onSuccess: MadMimi.subscribeDigest
+		});
 		
 		$('.subscribe-show').click(SubscribePanel.show);
 		$('.subscribe-hide').click(SubscribePanel.hide);
