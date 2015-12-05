@@ -124,6 +124,26 @@ a.logo img {
 	display: block;
 }
 
+#menu {
+	margin-top: 50px;
+}
+
+#menu a {
+	height: 100px;
+    width: 100px;
+    line-height: 100px;
+    padding: 0;
+    font-weight: bold;
+    border-color: #010101;
+    margin: 0 20px 20px 0;
+    color: #010101;
+    background-color: #fefefe;
+}
+
+#menu a:hover {
+	background-color: #7f7f7f;
+}
+
 #main .padding {
     padding: 20px;
 }
