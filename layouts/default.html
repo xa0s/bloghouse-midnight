@@ -5,6 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="generator" content="Blockhouse - powered by nanoc <%= Nanoc::VERSION %>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<% versions_of(@item).each do |k,v| %>
+			<link rel="alternate" hreflang="<%=k%>" href="<%=v.path%>" />
+		<% end %>
+
 		<title><%= @item[:title] %> – <%= tr('site.title') %></title>
 
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
