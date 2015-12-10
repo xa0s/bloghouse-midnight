@@ -28,6 +28,18 @@ var midnight = (function() {
 		if(window.location.search.search("utm_source=MadMimi") > 0 && window.location.search.search("utm_medium=email") > 0) {
 			AutoPopup.doNotDisturbLong();
 		}
+
+		processParameters();
+	}
+
+	function processParameters() {
+
+		var email = window.location.search.split('?').pop()
+			.split('&').filter(function(p){ return 0 === p.indexOf('m=') })
+			.map(function(p){ return p.split('=').pop() })
+			.pop();
+
+		$('form.madmimi.digest input.email').val(email);
 	}
 
 	var MadMimi = {
@@ -45,19 +57,32 @@ var midnight = (function() {
 			var name = form.find('input.name').first().val() || '';
 
 			var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+
 			script.src = 'https://madmimi.com/signups/subscribe/' + id + '.json?callback=midnight.madmimi.callback.digest' 
 				+ '&signup[email]=' + email
 				+ '&signup[lang]=' + lang
 				+ '&signup[type]=' + type
 				+ '&signup[source]=' + source
-				+ '&signup[name]=' + name
 				;
+
+			if(name) {
+				script.src += '&signup[name]=' + name;
+			}
+
 			document.body.appendChild(script);
 		},
 		callback: {
 			digest: function(result) {
 				if(result["success"]) {
-					midnight.thankyou.show();
+
+					midnight.autopopup.doNotDisturbLong();
+
+					if (window.location.href.match(/\/welcome\b/i)) {
+						midnight.thankyou.show();
+					}
+					else {
+						window.location.href = '/' + $('html').attr('lang') + '/welcome/?m=' + result["result"]["audience_member"]["email"];
+					}
 				}
 			}
 		}
