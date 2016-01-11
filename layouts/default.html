@@ -10,7 +10,7 @@
 			<link rel="alternate" hreflang="<%=k%>" href="<%=v.path%>" />
 		<% end %>
 
-		<title><%= @item[:title] %> – <%= tr('site.title') %></title>
+		<title><%= title_of(@item) %></title>
 
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.1/css/formValidation.min.css">
