@@ -84,9 +84,32 @@ form.digest button {
 
 /* other stuff */
 
-a.logo img {
-	width: 60%;
-	max-width: 200px;
+#brand {
+	font-size: 8px;
+	width: 210px;
+}
+
+#brand h1 {
+    margin-bottom: 2px;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: inherit;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+#brand h2 {
+    margin-top: 4px;
+    text-align: left;
+    text-transform: lowercase;
+    font-size: inherit;
+    font-weight: normal;
+    font-style: oblique;
+    letter-spacing: 0.09em;
+}
+
+#brand a, #brand img {
+	width: 100%;
 }
 
 #locales {
