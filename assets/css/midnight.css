@@ -273,6 +273,11 @@ a.nocolor {
 	font-size: smaller;
 }
 
+.epigraph {
+	padding-left: 30%;
+	font-style: italic;
+}
+
 /* mobile */
 
 @media (max-width: 767px) {
