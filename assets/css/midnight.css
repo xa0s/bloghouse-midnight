@@ -359,6 +359,10 @@ blockquote {
 	font-style: italic;
 }
 
+blockquote em {
+	text-decoration: underline;
+}
+
 .btn-primary {
 	background-color: #101010;
 	border-color: #101010;
